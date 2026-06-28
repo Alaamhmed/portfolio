@@ -33,7 +33,7 @@ transition:0.3s;
 background:linear-gradient(135deg,var(--primary),#00bcd4);
 color:white;
 text-align:center;
-padding:60px 20px;
+padding:70px 20px;
 position:relative;
 }
 
@@ -43,10 +43,12 @@ height:140px;
 border-radius:50%;
 object-fit:cover;
 border:4px solid white;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
 .hero h1{
 margin:15px 0 5px;
+font-size:34px;
 }
 
 .hero p{
@@ -69,6 +71,7 @@ border:none;
 cursor:pointer;
 border-radius:8px;
 font-weight:bold;
+background:white;
 }
 
 /* CONTAINER */
@@ -81,15 +84,17 @@ padding:20px;
 /* CARD */
 .card{
 background:var(--card);
-padding:20px;
+padding:22px;
 margin:20px 0;
-border-radius:15px;
-box-shadow:0 6px 18px rgba(0,0,0,0.1);
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 transition:0.3s;
+border:1px solid rgba(0,0,0,0.05);
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
+box-shadow:0 15px 30px rgba(0,0,0,0.12);
 }
 
 /* SKILLS */
@@ -97,8 +102,8 @@ transform:translateY(-5px);
 display:inline-block;
 background:var(--primary);
 color:white;
-padding:8px 12px;
-border-radius:20px;
+padding:8px 14px;
+border-radius:25px;
 margin:5px;
 font-size:13px;
 }
@@ -107,28 +112,36 @@ font-size:13px;
 .card img{
 width:100%;
 border-radius:12px;
-margin-top:10px;
+margin-top:12px;
 }
 
 /* BUTTON */
 .btn{
 display:inline-block;
-margin-top:10px;
-padding:10px 15px;
+margin-top:12px;
+padding:10px 16px;
 background:var(--primary);
 color:white;
 text-decoration:none;
-border-radius:8px;
+border-radius:10px;
+font-weight:bold;
 }
 
 .btn:hover{
 opacity:0.9;
 }
 
+/* SECTION TITLE */
+h2{
+border-left:4px solid var(--primary);
+padding-left:10px;
+}
+
 footer{
 text-align:center;
 padding:20px;
 color:gray;
+font-size:13px;
 }
 </style>
 </head>
@@ -139,8 +152,8 @@ color:gray;
 <div class="hero">
 
 <div class="top-buttons">
-<button onclick="toggleDark()">🌙 Dark Mode</button>
-<a class="btn" href="Alaa Mohamed.pdf" download>📄 Download CV</a>
+<button onclick="toggleDark()">🌙 Mode</button>
+<a class="btn" href="Alaa Mohamed.pdf" download>📄 CV</a>
 </div>
 
 <img src="profile.jpg">
@@ -156,7 +169,7 @@ color:gray;
 <p>
 Data Analyst with strong experience in sales, accounting, and business reporting.
 Skilled in Power BI, Excel, SQL, and Python.
-Passionate about turning raw data into actionable insights.
+Focused on turning data into actionable insights for business decisions.
 </p>
 </div>
 
@@ -170,21 +183,22 @@ Passionate about turning raw data into actionable insights.
 <span>Data Analysis</span>
 <span>Reporting</span>
 <span>Business Intelligence</span>
+<span>Financial Accounting</span>
+<span>Sales Analysis</span>
 </div>
 
-<!-- PROJECT 1 -->
+<!-- PROJECTS -->
 <div class="card">
 <h2>OUIA CAFE Dashboard</h2>
 <img src="ouia.png">
-<p>Sales performance dashboard using Power BI.</p>
+<p>Sales performance analysis dashboard built with Power BI.</p>
 <a class="btn" href="https://github.com/Alaamhmed/OUIA-CAFE" target="_blank">View Project</a>
 </div>
 
-<!-- PROJECT 2 -->
 <div class="card">
 <h2>EZ Bakery Dashboard</h2>
 <img src="bakery.png">
-<p>Business analysis dashboard for bakery operations.</p>
+<p>Business insights dashboard for operational performance.</p>
 <a class="btn" href="https://github.com/Alaamhmed/Ez-Bakery" target="_blank">View Project</a>
 </div>
 
