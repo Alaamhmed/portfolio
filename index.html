@@ -4,35 +4,81 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alaa Ahmed | Data Analyst</title>
+
 <style>
 body{
-font-family:Arial,sans-serif;
-background:#f5f5f5;
 margin:0;
-padding:0;
+font-family:Arial;
+background:#f4f6f9;
+color:#333;
 }
+
 header{
 background:#0d6efd;
 color:white;
-padding:40px;
 text-align:center;
+padding:50px 20px;
 }
+
+header img{
+width:140px;
+height:140px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid white;
+margin-bottom:15px;
+}
+
 .container{
+width:90%;
 max-width:1000px;
 margin:auto;
-padding:30px;
+padding:20px;
 }
-.project{
+
+.section{
 background:white;
 padding:20px;
-margin-bottom:20px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,.1);
+margin:20px 0;
+border-radius:12px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
-a{
+
+h2{
 color:#0d6efd;
+}
+
+.skills span{
+display:inline-block;
+background:#0d6efd;
+color:white;
+padding:8px 12px;
+border-radius:20px;
+margin:5px;
+font-size:14px;
+}
+
+.project img{
+width:100%;
+border-radius:10px;
+margin-top:10px;
+}
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 15px;
+background:#0d6efd;
+color:white;
 text-decoration:none;
-font-weight:bold;
+border-radius:8px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+margin-top:20px;
+color:#777;
 }
 </style>
 </head>
@@ -40,25 +86,60 @@ font-weight:bold;
 <body>
 
 <header>
+<img src="profile.jpg">
 <h1>Alaa Ahmed</h1>
-<p>Junior Data Analyst | Excel | Power BI | SQL | Python</p>
+<p>Junior Data Analyst | Excel | SQL | Power BI | Python</p>
 </header>
 
 <div class="container">
 
-<div class="project">
+<!-- ABOUT -->
+<div class="section">
+<h2>About Me</h2>
+<p>
+Junior Data Analyst passionate about turning raw data into meaningful insights.
+Skilled in Excel, SQL, Power BI, and Python.
+I build dashboards and analyze business data to support decision making.
+</p>
+</div>
+
+<!-- SKILLS -->
+<div class="section skills">
+<h2>Skills</h2>
+<span>Excel</span>
+<span>SQL</span>
+<span>Power BI</span>
+<span>Python</span>
+</div>
+
+<!-- PROJECT 1 -->
+<div class="section project">
 <h2>OUIA CAFE Dashboard</h2>
-<p>Interactive Power BI dashboard for monitoring sales, products and costs.</p>
-<a href="https://github.com/Alaamhmed/OUIA-CAFE" target="_blank">View Project</a>
+<img src="ouia.png">
+<p>Sales analysis dashboard built using Power BI.</p>
+<a class="btn" href="https://github.com/Alaamhmed/OUIA-CAFE" target="_blank">View Project</a>
 </div>
 
-<div class="project">
+<!-- PROJECT 2 -->
+<div class="section project">
 <h2>EZ Bakery Dashboard</h2>
-<p>Interactive dashboard to analyze bakery sales performance.</p>
-<a href="https://github.com/Alaamhmed/Ez-Bakery" target="_blank">View Project</a>
+<img src="bakery.png">
+<p>Business insights dashboard for bakery sales performance.</p>
+<a class="btn" href="https://github.com/Alaamhmed/Ez-Bakery" target="_blank">View Project</a>
+</div>
+
+<!-- CONTACT -->
+<div class="section">
+<h2>Contact</h2>
+<p>Email: yourname@email.com</p>
+<p>GitHub: https://github.com/Alaamhmed</p>
 </div>
 
 </div>
+
+<footer>
+© 2026 Alaa Ahmed - Data Analyst Portfolio
+</footer>
 
 </body>
 </html>
