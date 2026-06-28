@@ -6,19 +6,35 @@
 <title>Alaa Ahmed | Data Analyst</title>
 
 <style>
+:root{
+    --bg:#f5f7fb;
+    --card:#ffffff;
+    --text:#222;
+    --primary:#0d6efd;
+}
+
+body.dark{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --text:#f1f5f9;
+    --primary:#38bdf8;
+}
+
 body{
 margin:0;
 font-family:Arial;
-background:#f0f2f5;
-color:#333;
+background:var(--bg);
+color:var(--text);
+transition:0.3s;
 }
 
 /* HERO */
 .hero{
-background:linear-gradient(135deg,#0d6efd,#00bcd4);
+background:linear-gradient(135deg,var(--primary),#00bcd4);
 color:white;
 text-align:center;
 padding:60px 20px;
+position:relative;
 }
 
 .hero img{
@@ -27,11 +43,10 @@ height:140px;
 border-radius:50%;
 object-fit:cover;
 border:4px solid white;
-margin-bottom:10px;
 }
 
 .hero h1{
-margin:10px 0 5px;
+margin:15px 0 5px;
 }
 
 .hero p{
@@ -39,21 +54,37 @@ margin:0;
 opacity:0.9;
 }
 
+/* TOP BUTTONS */
+.top-buttons{
+position:absolute;
+top:20px;
+right:20px;
+display:flex;
+gap:10px;
+}
+
+.top-buttons button{
+padding:8px 12px;
+border:none;
+cursor:pointer;
+border-radius:8px;
+font-weight:bold;
+}
+
 /* CONTAINER */
 .container{
-width:90%;
 max-width:1000px;
 margin:auto;
-padding:30px 0;
+padding:20px;
 }
 
 /* CARD */
 .card{
-background:white;
+background:var(--card);
 padding:20px;
 margin:20px 0;
 border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 6px 18px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
@@ -64,7 +95,7 @@ transform:translateY(-5px);
 /* SKILLS */
 .skills span{
 display:inline-block;
-background:#0d6efd;
+background:var(--primary);
 color:white;
 padding:8px 12px;
 border-radius:20px;
@@ -84,20 +115,20 @@ margin-top:10px;
 display:inline-block;
 margin-top:10px;
 padding:10px 15px;
-background:#0d6efd;
+background:var(--primary);
 color:white;
 text-decoration:none;
 border-radius:8px;
 }
 
 .btn:hover{
-background:#084dc3;
+opacity:0.9;
 }
 
 footer{
 text-align:center;
 padding:20px;
-color:#777;
+color:gray;
 }
 </style>
 </head>
@@ -106,9 +137,15 @@ color:#777;
 
 <!-- HERO -->
 <div class="hero">
+
+<div class="top-buttons">
+<button onclick="toggleDark()">🌙 Dark Mode</button>
+<a class="btn" href="Alaa Mohamed.pdf" download>📄 Download CV</a>
+</div>
+
 <img src="profile.jpg">
 <h1>Alaa Ahmed</h1>
-<p>Junior Data Analyst | Excel | SQL | Power BI | Python</p>
+<p>Data Analyst | Excel | SQL | Power BI | Python</p>
 </div>
 
 <div class="container">
@@ -117,25 +154,29 @@ color:#777;
 <div class="card">
 <h2>About Me</h2>
 <p>
-I am a Junior Data Analyst passionate about transforming raw data into actionable insights.
-I specialize in Excel, SQL, Power BI, and Python for data analysis and visualization.
+Data Analyst with strong experience in sales, accounting, and business reporting.
+Skilled in Power BI, Excel, SQL, and Python.
+Passionate about turning raw data into actionable insights.
 </p>
 </div>
 
 <!-- SKILLS -->
 <div class="card skills">
 <h2>Skills</h2>
+<span>Power BI</span>
 <span>Excel</span>
 <span>SQL</span>
-<span>Power BI</span>
 <span>Python</span>
+<span>Data Analysis</span>
+<span>Reporting</span>
+<span>Business Intelligence</span>
 </div>
 
 <!-- PROJECT 1 -->
 <div class="card">
 <h2>OUIA CAFE Dashboard</h2>
 <img src="ouia.png">
-<p>Power BI dashboard analyzing sales performance and business insights.</p>
+<p>Sales performance dashboard using Power BI.</p>
 <a class="btn" href="https://github.com/Alaamhmed/OUIA-CAFE" target="_blank">View Project</a>
 </div>
 
@@ -143,15 +184,26 @@ I specialize in Excel, SQL, Power BI, and Python for data analysis and visualiza
 <div class="card">
 <h2>EZ Bakery Dashboard</h2>
 <img src="bakery.png">
-<p>Sales analysis dashboard for bakery business performance tracking.</p>
+<p>Business analysis dashboard for bakery operations.</p>
 <a class="btn" href="https://github.com/Alaamhmed/Ez-Bakery" target="_blank">View Project</a>
+</div>
+
+<!-- CERTIFICATES -->
+<div class="card">
+<h2>Certificates</h2>
+<p>📊 Data Analysis - AMIT (2025)</p>
+<p>📈 CMA Part 1 - AURA Academy</p>
+<p>📘 English Course - MTCC</p>
 </div>
 
 <!-- CONTACT -->
 <div class="card">
 <h2>Contact</h2>
-<p>Email: yourname@email.com</p>
-<p>GitHub: github.com/Alaamhmed</p>
+<p>📧 Email: alaamhmed010061@hotmail.com</p>
+<p>📱 Mobile: +971 501 882 997</p>
+<p>📞 Phone: +20 100 612 0408</p>
+<p>🔗 LinkedIn: <a href="http://linkedin.com/in/alaa-mahmed-0bb08a204" target="_blank">Profile</a></p>
+<p>💻 GitHub: github.com/Alaamhmed</p>
 </div>
 
 </div>
@@ -159,6 +211,12 @@ I specialize in Excel, SQL, Power BI, and Python for data analysis and visualiza
 <footer>
 © 2026 Alaa Ahmed - Data Analyst Portfolio
 </footer>
+
+<script>
+function toggleDark(){
+document.body.classList.toggle("dark");
+}
+</script>
 
 </body>
 </html>
