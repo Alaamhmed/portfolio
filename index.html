@@ -9,45 +9,59 @@
 body{
 margin:0;
 font-family:Arial;
-background:#f4f6f9;
+background:#f0f2f5;
 color:#333;
 }
 
-header{
-background:#0d6efd;
+/* HERO */
+.hero{
+background:linear-gradient(135deg,#0d6efd,#00bcd4);
 color:white;
 text-align:center;
-padding:50px 20px;
+padding:60px 20px;
 }
 
-header img{
+.hero img{
 width:140px;
 height:140px;
 border-radius:50%;
 object-fit:cover;
 border:4px solid white;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
+.hero h1{
+margin:10px 0 5px;
+}
+
+.hero p{
+margin:0;
+opacity:0.9;
+}
+
+/* CONTAINER */
 .container{
 width:90%;
 max-width:1000px;
 margin:auto;
-padding:20px;
+padding:30px 0;
 }
 
-.section{
+/* CARD */
+.card{
 background:white;
 padding:20px;
 margin:20px 0;
-border-radius:12px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
-h2{
-color:#0d6efd;
+.card:hover{
+transform:translateY(-5px);
 }
 
+/* SKILLS */
 .skills span{
 display:inline-block;
 background:#0d6efd;
@@ -55,15 +69,17 @@ color:white;
 padding:8px 12px;
 border-radius:20px;
 margin:5px;
-font-size:14px;
+font-size:13px;
 }
 
-.project img{
+/* PROJECT IMAGE */
+.card img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
 margin-top:10px;
 }
 
+/* BUTTON */
 .btn{
 display:inline-block;
 margin-top:10px;
@@ -74,10 +90,13 @@ text-decoration:none;
 border-radius:8px;
 }
 
+.btn:hover{
+background:#084dc3;
+}
+
 footer{
 text-align:center;
 padding:20px;
-margin-top:20px;
 color:#777;
 }
 </style>
@@ -85,26 +104,26 @@ color:#777;
 
 <body>
 
-<header>
+<!-- HERO -->
+<div class="hero">
 <img src="profile.jpg">
 <h1>Alaa Ahmed</h1>
 <p>Junior Data Analyst | Excel | SQL | Power BI | Python</p>
-</header>
+</div>
 
 <div class="container">
 
 <!-- ABOUT -->
-<div class="section">
+<div class="card">
 <h2>About Me</h2>
 <p>
-Junior Data Analyst passionate about turning raw data into meaningful insights.
-Skilled in Excel, SQL, Power BI, and Python.
-I build dashboards and analyze business data to support decision making.
+I am a Junior Data Analyst passionate about transforming raw data into actionable insights.
+I specialize in Excel, SQL, Power BI, and Python for data analysis and visualization.
 </p>
 </div>
 
 <!-- SKILLS -->
-<div class="section skills">
+<div class="card skills">
 <h2>Skills</h2>
 <span>Excel</span>
 <span>SQL</span>
@@ -113,26 +132,26 @@ I build dashboards and analyze business data to support decision making.
 </div>
 
 <!-- PROJECT 1 -->
-<div class="section project">
+<div class="card">
 <h2>OUIA CAFE Dashboard</h2>
 <img src="ouia.png">
-<p>Sales analysis dashboard built using Power BI.</p>
+<p>Power BI dashboard analyzing sales performance and business insights.</p>
 <a class="btn" href="https://github.com/Alaamhmed/OUIA-CAFE" target="_blank">View Project</a>
 </div>
 
 <!-- PROJECT 2 -->
-<div class="section project">
+<div class="card">
 <h2>EZ Bakery Dashboard</h2>
 <img src="bakery.png">
-<p>Business insights dashboard for bakery sales performance.</p>
+<p>Sales analysis dashboard for bakery business performance tracking.</p>
 <a class="btn" href="https://github.com/Alaamhmed/Ez-Bakery" target="_blank">View Project</a>
 </div>
 
 <!-- CONTACT -->
-<div class="section">
+<div class="card">
 <h2>Contact</h2>
 <p>Email: yourname@email.com</p>
-<p>GitHub: https://github.com/Alaamhmed</p>
+<p>GitHub: github.com/Alaamhmed</p>
 </div>
 
 </div>
