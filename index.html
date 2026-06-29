@@ -1,258 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Alaa Ahmed | Data Analyst</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root{
-    --bg:#f5f7fb;
-    --card:#ffffff;
-    --text:#222;
-    --primary:#526683;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
-body.dark{
-    --bg:#0f172a;
-    --card:#1e293b;
-    --text:#f1f5f9;
-    --primary:#526683;
+:root{
+
+--bg:#0f172a;
+--card:#1e293b;
+--card2:#273449;
+--text:#f8fafc;
+--primary:#526683;
+--hover:#657892;
+--border:#334155;
+
 }
 
 body{
-margin:0;
-font-family:Arial;
+
+font-family:'Poppins',sans-serif;
 background:var(--bg);
 color:var(--text);
-transition:0.3s;
+
 }
 
-/* HERO */
-.hero{
-background:linear-gradient(135deg,var(--primary),#202940);
+a{
+
+text-decoration:none;
 color:white;
-text-align:center;
-padding:70px 20px;
+
+}
+
+.container{
+
+width:90%;
+max-width:1200px;
+margin:auto;
+
+}
+
+section{
+
+padding:80px 0;
+
+}
+
+h2{
+
+font-size:32px;
+margin-bottom:30px;
 position:relative;
+
+}
+
+h2::after{
+
+content:"";
+position:absolute;
+left:0;
+bottom:-8px;
+width:70px;
+height:4px;
+background:var(--primary);
+border-radius:10px;
+
+}
+
+.hero{
+
+min-height:100vh;
+
+background:
+
+linear-gradient(rgba(15,23,42,.82),rgba(15,23,42,.88)),
+url("profile.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+padding:40px;
+
 }
 
 .hero img{
-width:140px;
-height:140px;
+
+width:180px;
+height:180px;
+
 border-radius:50%;
+
+border:5px solid white;
+
 object-fit:cover;
-border:4px solid white;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
+
+box-shadow:0 0 35px rgba(0,0,0,.4);
+
 }
 
 .hero h1{
-margin:15px 0 5px;
+
+margin-top:25px;
+
+font-size:50px;
+
+font-weight:700;
+
+}
+
+.hero p{
+
+margin-top:12px;
+
+font-size:22px;
+
+color:#d1d5db;
+
+}
+
+.hero-buttons{
+
+margin-top:35px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:14px 28px;
+
+background:var(--primary);
+
+border-radius:12px;
+
+font-weight:600;
+
+transition:.35s;
+
+display:inline-block;
+
+}
+
+.btn:hover{
+
+background:var(--hover);
+
+transform:translateY(-3px);
+
+}
+
+.btn-outline{
+
+padding:14px 28px;
+
+border:2px solid white;
+
+border-radius:12px;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.btn-outline:hover{
+
+background:white;
+
+color:#111827;
+
+}
+<style>
+
+/* NAV */
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(15,23,42,.7);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+z-index:999;
+}
+
+nav h3{
+color:white;
+font-size:20px;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav ul li a{
+color:#cbd5e1;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:white;
+}
+
+/* ABOUT */
+.about{
+background:var(--bg);
+text-align:center;
+}
+
+.about p{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+color:#cbd5e1;
+font-size:17px;
+}
+
+/* SKILLS */
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:15px;
+margin-top:40px;
+}
+
+.skill{
+background:var(--card);
+padding:14px;
+border-radius:12px;
+text-align:center;
+transition:.3s;
+border:1px solid var(--border);
+}
+
+.skill:hover{
+transform:translateY(-5px);
+background:var(--card2);
+}
+
+/* PROJECTS */
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.project{
+background:var(--card);
+border-radius:16px;
+overflow:hidden;
+border:1px solid var(--border);
+transition:.3s;
+}
+
+.project:hover{
+transform:translateY(-6px);
+}
+
+.project img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.project-content{
+padding:18px;
+}
+
+.project-content p{
+color:#cbd5e1;
+margin:10px 0;
+line-height:1.5;
+}
+
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-top:10px;
+}
+
+.tag{
+font-size:12px;
+padding:5px 10px;
+background:var(--primary);
+border-radius:20px;
+}
+<!-- CERTIFICATES -->
+<section class="container" id="certificates">
+
+<h2>Certificates</h2>
+
+<div class="skills-grid">
+
+<div class="skill">
+📊 Data Analysis<br>
+<small>AMIT - 2025</small>
+</div>
+
+<div class="skill">
+📈 CMA Diploma<br>
+<small>AURA Academy</small>
+</div>
+
+<div class="skill">
+📘 English Course<br>
+<small>MTCC</small>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="container" id="contact">
+
+<h2>Contact</h2>
+
+<div class="skills-grid">
+
+<div class="skill">
+📧 Email<br>
+<small>alaamhmed010061@hotmail.com</small>
+</div>
+
+<div class="skill">
+📱 Phone<br>
+<small>+971 501 882 997</small>
+</div>
+
+<div class="skill">
+📞 Egypt<br>
+<small>+20 100 612 0408</small>
+</div>
+
+<div class="skill">
+💼 LinkedIn<br>
+<small>linkedin.com/in/alaa-mahmed-0bb08a204</small>
+</div>
+
+<div class="skill">
+💻 GitHub<br>
+<small>github.com/Alaamhmed</small>
+</div>
+
+</div>
+
+<!-- CV BUTTON -->
+<div style="text-align:center;margin-top:40px;">
+<a class="btn" href="Alaa Mohamed.pdf" download>
+📄 Download CV
+</a>
+</div>
+
+</section>
+<!-- HERO CONTINUED + NAV STRUCTURE -->
+<body>
+
+<nav>
+<h3>Alaa Ahmed</h3>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#certificates">Certificates</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div>
+
+<img src="profile.jpg">
+
+<h1>Alaa Ahmed</h1>
+
+<p>Data Analyst | Power BI | SQL | Excel | Python</p>
+
+<div class="hero-buttons">
+
+<a class="btn" href="#projects">View Work</a>
+
+<a class="btn-outline" href="#contact">Contact Me</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about container" id="about">
+
+<h2>About Me</h2>
+
+<p>
+Data Analyst with strong experience in sales, accounting, and business reporting.
+Skilled in Power BI, Excel, SQL, and Python.
+Focused on turning data into actionable insights for business decisions.
+</p>
+
+</section>
+
+<!-- SKILLS -->
+<section class="container" id="skills">
+
+<h2>Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill">Power BI</div>
+<div class="skill">Excel</div>
+<div class="skill">SQL</div>
+<div class="skill">Python</div>
+<div class="skill">Data Analysis</div>
+<div class="skill">Reporting</div>
+<div class="skill">Business Intelligence</div>
+
+</div>
+
+</section>
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:25px;
+color:#94a3b8;
+border-top:1px solid var(--border);
+margin-top:60px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.hero h1{
 font-size:34px;
 }
 
 .hero p{
-margin:0;
-opacity:0.9;
+font-size:16px;
 }
 
-/* TOP BUTTONS */
-.top-buttons{
-position:absolute;
-top:20px;
-right:20px;
-display:flex;
-gap:10px;
+nav{
+padding:15px 20px;
 }
 
-.top-buttons button{
-padding:8px 12px;
-border:none;
-cursor:pointer;
-border-radius:8px;
-font-weight:bold;
-background:white;
+nav ul{
+display:none;
 }
 
-/* CONTAINER */
-.container{
-max-width:1000px;
-margin:auto;
-padding:20px;
 }
 
-/* CARD */
-.card{
-background:var(--card);
-padding:22px;
-margin:20px 0;
-border-radius:16px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.3s;
-border:1px solid rgba(0,0,0,0.05);
-}
-
-.card:hover{
-transform:translateY(-6px);
-box-shadow:0 15px 30px rgba(0,0,0,0.12);
-}
-a{
-color:var(--primary);
-text-decoration:none;
-font-weight:600;
-}
-
-a:hover{
-opacity:0.8;
-}
-
-a:link,
-a:visited,
-a:active{
-color: var(--primary);
-text-decoration:none;
-}
-
-a:hover{
-opacity:0.8;
-}
-
-/* SKILLS */
-.skills span{
-display:inline-block;
-background:var(--primary);
-color:white;
-padding:8px 14px;
-border-radius:25px;
-margin:5px;
-font-size:13px;
-}
-
-/* PROJECT IMAGE */
-.card img{
-width:100%;
-border-radius:12px;
-margin-top:12px;
-}
-
-/* BUTTON */
-.btn{
-display:inline-block;
-margin-top:12px;
-padding:10px 16px;
-background:var(--primary);
-color:white;
-text-decoration:none;
-border-radius:10px;
-font-weight:bold;
-}
-
-.btn:hover{
-opacity:0.9;
-}
-
-/* SECTION TITLE */
-h2{
-border-left:4px solid var(--primary);
-padding-left:10px;
-}
-
-footer{
-text-align:center;
-padding:20px;
-color:gray;
-font-size:13px;
-}
 </style>
+
 </head>
 
-<body>
-
-<!-- HERO -->
-<div class="hero">
-
-<div class="top-buttons">
-<button onclick="toggleDark()">🌙 Mode</button>
-<a class="btn" href="Alaa Mohamed.pdf" download>📄 CV</a>
-</div>
-
-<img src="profile.jpg">
-<h1>Alaa Ahmed</h1>
-<p>Data Analyst</p>
-</div>
-
-<div class="container">
-
-<!-- ABOUT -->
-<div class="card">
-<h2>About Me</h2>
-<p>
-Data Analyst with strong experience in sales, accounting, and business reporting.
-    
-Skilled in Power BI, Excel, SQL, and Python.
-    
-Focused on turning data into actionable insights for business decisions.
-</p>
-</div>
-
-<!-- SKILLS -->
-<div class="card skills">
-<h2>Skills</h2>
-<span>Power BI</span>
-<span>Excel</span>
-<span>SQL</span>
-<span>Python</span>
-<span>Data Analysis</span>
-<span>Reporting</span>
-<span>Business Intelligence</span>
-<span>Financial Accounting</span>
-<span>Sales Analysis</span>
-</div>
-
-<!-- PROJECTS -->
-<div class="card">
-<h2>OUIA CAFE Dashboard</h2>
-<img src="ouia.png">
-<p>Sales performance analysis dashboard built with Power BI.</p>
-<a class="btn" href="https://github.com/Alaamhmed/OUIA-CAFE" target="_blank">View Project</a>
-</div>
-
-<div class="card">
-<h2>EZ Bakery Dashboard</h2>
-<img src="bakery.png">
-<p>Business insights dashboard for operational performance.</p>
-<a class="btn" href="https://github.com/Alaamhmed/Ez-Bakery" target="_blank">View Project</a>
-</div>
-
-<!-- CERTIFICATES -->
-<div class="card">
-<h2>Certificates</h2>
-<p>📊 Data Analysis - AMIT (2025)</p>
-<p>📈 CMA Part 1 - AURA Academy</p>
-<p>📘 English Course - MTCC</p>
-</div>
-
-<!-- CONTACT -->
-<div class="card">
-<h2>Contact</h2>
-<p>📧 Email: alaamhmed010061@hotmail.com</p>
-<p>📱 Mobile: +971 501882997</p>
-<p>📞 Phone: +20 1006120408</p>
-<p>🔗 LinkedIn: <a href="http://linkedin.com/in/alaa-mahmed-0bb08a204" target="_blank">Profile</a></p>
-<p>💻 GitHub: github.com/Alaamhmed</p>
-</div>
-
-</div>
-
-<footer>
-© 2026 Alaa Ahmed - Data Analyst Portfolio
-</footer>
-
-<script>
-function toggleDark(){
-document.body.classList.toggle("dark");
-}
-</script>
+<!-- END OF CSS / START JS -->
 
 </body>
+
 </html>
