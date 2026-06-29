@@ -95,7 +95,7 @@
         /* --- HERO SECTION --- */
         .hero {
             min-height: 90vh;
-            background: linear-gradient(rgba(15,23,42,.82), rgba(15,23,42,.88)), url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80");
+            background: linear-gradient(rgba(15,23,42,.82), rgba(15,23,42,.88)), url("bakery.png"); /* تم تغيير الخلفية لصورة مشروعك كشكل جمالي */
             background-size: cover;
             background-position: center;
             display: flex;
@@ -256,19 +256,20 @@
         .project-btn {
             display: block;
             text-align: center;
-            padding: 10px;
+            padding: 12px;
             background: transparent;
-            border: 1px solid var(--primary);
+            border: 2px solid var(--primary);
             border-radius: 8px;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 14px;
             transition: 0.3s;
-            color: #cbd5e1;
-            margin-top: 10px;
+            color: white;
+            margin-top: 15px;
         }
         .project-btn:hover {
             background: var(--primary);
             color: white;
+            transform: translateY(-2px);
         }
 
         /* --- FOOTER --- */
@@ -302,6 +303,7 @@
 </head>
 <body>
 
+    <!-- NAV STRUCTURE -->
     <nav>
         <h3>Alaa Ahmed</h3>
         <ul>
@@ -313,9 +315,11 @@
         </ul>
     </nav>
 
+    <!-- HERO SECTION -->
     <section class="hero">
         <div>
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=180&h=180&q=80" alt="Alaa Ahmed">
+            <!-- تأكد من وجود ملف profile.jpg في نفس الفولدر أو استبدله برابط صورتك الشخصية -->
+            <img src="profile.jpg" alt="Alaa Ahmed">
             <h1>Alaa Ahmed</h1>
             <p>Data Analyst | Power BI | SQL | Excel | Python</p>
             <div class="hero-buttons">
@@ -325,6 +329,7 @@
         </div>
     </section>
 
+    <!-- ABOUT -->
     <section class="about container" id="about">
         <h2>About Me</h2>
         <p>
@@ -332,6 +337,7 @@
         </p>
     </section>
 
+    <!-- SKILLS -->
     <section class="container" id="skills">
         <h2>Skills</h2>
         <div class="skills-grid">
@@ -345,45 +351,51 @@
         </div>
     </section>
 
+    <!-- PROJECTS -->
     <section class="container" id="projects">
         <h2>Projects</h2>
         <div class="projects-grid">
             
+            <!-- Project 1: Bakery -->
             <div class="project">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Sales Performance Dashboard">
+                <img src="bakery.png" alt="Bakery Business Analysis">
                 <div class="project-content">
                     <div class="project-info">
-                        <h3>Sales Performance Dashboard</h3>
-                        <p>Interactive Power BI dashboard analyzing sales trends, regional performance, and profit margins to optimize business growth.</p>
+                        <h3>Bakery Performance Analysis</h3>
+                        <p>A comprehensive dashboard created to track sales velocity, ingredient costs, and optimization points for a bakery business model.</p>
                         <div class="tags">
                             <span class="tag">Power BI</span>
                             <span class="tag">Excel</span>
                             <span class="tag">DAX</span>
                         </div>
                     </div>
-                    <a class="project-btn" href="https://github.com/Alaamhmed" target="_blank">🔗 View on GitHub</a>
+                    <!-- حط رابط الجيت هب الخاص بمشروع الـ Bakery هنا مكان الـ # -->
+                    <a class="project-btn" href="https://github.com/Alaamhmed" target="_blank">📊 View Dashboard</a>
                 </div>
             </div>
 
+            <!-- Project 2: Ouia -->
             <div class="project">
-                <img src="https://images.unsplash.com/photo-1543286386-7a39e2d97dbc?auto=format&fit=crop&w=500&q=80" alt="Financial Analysis Dashboard">
+                <img src="ouia.png" alt="Ouia Data Insights">
                 <div class="project-content">
                     <div class="project-info">
-                        <h3>Financial Insights Report</h3>
-                        <p>Advanced financial dashboard built to track revenue, expenses, and operational KPIs using strict business intelligence practices.</p>
+                        <h3>Ouia Business Intelligence Dashboard</h3>
+                        <p>Interactive reporting dashboard analyzing operations, performance KPIs, and data modeling to deliver actionable business decisions.</p>
                         <div class="tags">
                             <span class="tag">Power BI</span>
                             <span class="tag">Excel</span>
                             <span class="tag">DAX</span>
                         </div>
                     </div>
-                    <a class="project-btn" href="https://github.com/Alaamhmed" target="_blank">🔗 View on GitHub</a>
+                    <!-- حط رابط الجيت هب الخاص بمشروع الـ Ouia هنا مكان الـ # -->
+                    <a class="project-btn" href="https://github.com/Alaamhmed" target="_blank">📊 View Dashboard</a>
                 </div>
             </div>
 
         </div>
     </section>
 
+    <!-- CERTIFICATES -->
     <section class="container" id="certificates">
         <h2>Certificates</h2>
         <div class="skills-grid">
@@ -402,6 +414,7 @@
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="container" id="contact">
         <h2>Contact</h2>
         <div class="skills-grid">
@@ -410,7 +423,7 @@
                 <small><a href="mailto:alaamhmed010061@hotmail.com">alaamhmed010061@hotmail.com</a></small>
             </div>
             <div class="skill">
-                📱 UAE Phone<br>
+                📱 Phone<br>
                 <small><a href="tel:+971501882997">+971 501 882 997</a></small>
             </div>
             <div class="skill">
@@ -427,11 +440,13 @@
             </div>
         </div>
 
+        <!-- CV BUTTON -->
         <div style="text-align:center; margin-top:40px;">
             <a class="btn" href="Alaa Mohamed.pdf" download>📄 Download CV</a>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Alaa Ahmed. All rights reserved.</p>
     </footer>
