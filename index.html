@@ -95,7 +95,7 @@
         /* --- HERO SECTION --- */
         .hero {
             min-height: 90vh;
-            background: linear-gradient(rgba(15,23,42,.82), rgba(15,23,42,.88)), url("profile.jpg");
+            background: linear-gradient(rgba(15,23,42,.82), rgba(15,23,42,.88)), url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80");
             background-size: cover;
             background-position: center;
             display: flex;
@@ -172,7 +172,6 @@
         /* --- SKILLS & CERTIFICATES & CONTACT GRID --- */
         .skills-grid {
             display: grid;
-            /* زدنا الحد الأدنى لـ 220px عشان كروت التواصل تستوعب الداتا */
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
             gap: 15px;
             margin-top: 40px;
@@ -184,7 +183,6 @@
             text-align: center;
             transition: .3s;
             border: 1px solid var(--border);
-            /* لمنع خروج الإيميل أو الروابط الطويلة عن حدود الكارد */
             word-break: break-word; 
         }
         .skill:hover {
@@ -212,6 +210,9 @@
             overflow: hidden;
             border: 1px solid var(--border);
             transition: .3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .project:hover {
             transform: translateY(-6px);
@@ -219,17 +220,21 @@
         }
         .project img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
         }
         .project-content {
             padding: 18px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .project-content h3 {
+        .project-info h3 {
             margin-bottom: 8px;
             font-size: 20px;
         }
-        .project-content p {
+        .project-info p {
             color: #cbd5e1;
             margin: 10px 0;
             line-height: 1.5;
@@ -239,13 +244,31 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-top: 15px;
+            margin: 15px 0;
         }
         .tag {
             font-size: 12px;
             padding: 5px 10px;
             background: var(--primary);
             border-radius: 20px;
+            font-weight: 500;
+        }
+        .project-btn {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background: transparent;
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: 0.3s;
+            color: #cbd5e1;
+            margin-top: 10px;
+        }
+        .project-btn:hover {
+            background: var(--primary);
+            color: white;
         }
 
         /* --- FOOTER --- */
@@ -279,7 +302,6 @@
 </head>
 <body>
 
-    <!-- NAV STRUCTURE -->
     <nav>
         <h3>Alaa Ahmed</h3>
         <ul>
@@ -291,10 +313,9 @@
         </ul>
     </nav>
 
-    <!-- HERO SECTION -->
     <section class="hero">
         <div>
-            <img src="profile.jpg" alt="Alaa Ahmed">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=180&h=180&q=80" alt="Alaa Ahmed">
             <h1>Alaa Ahmed</h1>
             <p>Data Analyst | Power BI | SQL | Excel | Python</p>
             <div class="hero-buttons">
@@ -304,7 +325,6 @@
         </div>
     </section>
 
-    <!-- ABOUT -->
     <section class="about container" id="about">
         <h2>About Me</h2>
         <p>
@@ -312,7 +332,6 @@
         </p>
     </section>
 
-    <!-- SKILLS -->
     <section class="container" id="skills">
         <h2>Skills</h2>
         <div class="skills-grid">
@@ -326,40 +345,45 @@
         </div>
     </section>
 
-    <!-- PROJECTS (تمت إضافته وتفعيله) -->
     <section class="container" id="projects">
         <h2>Projects</h2>
         <div class="projects-grid">
-            <!-- Project 1 -->
+            
             <div class="project">
-                <img src="project1.jpg" alt="Sales Dashboard">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Sales Performance Dashboard">
                 <div class="project-content">
-                    <h3>Sales Performance Dashboard</h3>
-                    <p>Interactive Power BI dashboard analyzing sales trends, regional performance, and profit margins to optimize business growth.</p>
-                    <div class="tags">
-                        <span class="tag">Power BI</span>
-                        <span class="tag">Excel</span>
-                        <span class="tag">DAX</span>
+                    <div class="project-info">
+                        <h3>Sales Performance Dashboard</h3>
+                        <p>Interactive Power BI dashboard analyzing sales trends, regional performance, and profit margins to optimize business growth.</p>
+                        <div class="tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Excel</span>
+                            <span class="tag">DAX</span>
+                        </div>
                     </div>
+                    <a class="project-btn" href="https://github.com/Alaamhmed" target="_blank">🔗 View on GitHub</a>
                 </div>
             </div>
-            <!-- Project 2 -->
+
             <div class="project">
-                <img src="project2.jpg" alt="SQL Analysis">
+                <img src="https://images.unsplash.com/photo-1543286386-7a39e2d97dbc?auto=format&fit=crop&w=500&q=80" alt="Financial Analysis Dashboard">
                 <div class="project-content">
-                    <h3>E-commerce Data Analysis</h3>
-                    <p>Using SQL to extract and clean large datasets, identifying customer purchasing behavior and churn risk factors.</p>
-                    <div class="tags">
-                        <span class="tag">SQL</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Data Cleaning</span>
+                    <div class="project-info">
+                        <h3>Financial Insights Report</h3>
+                        <p>Advanced financial dashboard built to track revenue, expenses, and operational KPIs using strict business intelligence practices.</p>
+                        <div class="tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Excel</span>
+                            <span class="tag">DAX</span>
+                        </div>
                     </div>
+                    <a class="project-btn" href="https://github.com/Alaamhmed" target="_blank">🔗 View on GitHub</a>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- CERTIFICATES -->
     <section class="container" id="certificates">
         <h2>Certificates</h2>
         <div class="skills-grid">
@@ -378,7 +402,6 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
     <section class="container" id="contact">
         <h2>Contact</h2>
         <div class="skills-grid">
@@ -404,13 +427,11 @@
             </div>
         </div>
 
-        <!-- CV BUTTON -->
         <div style="text-align:center; margin-top:40px;">
             <a class="btn" href="Alaa Mohamed.pdf" download>📄 Download CV</a>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Alaa Ahmed. All rights reserved.</p>
     </footer>
