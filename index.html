@@ -7,6 +7,8 @@
 
 <title>Alaa Ahmed | Data Analyst</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -16,7 +18,6 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 scroll-behavior:smooth;
-font-family:'Poppins',sans-serif;
 }
 
 :root{
@@ -30,8 +31,112 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
+font-family:'Poppins',sans-serif;
 background:var(--bg);
 color:var(--text);
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+section{
+padding:80px 0;
+}
+
+h2{
+font-size:32px;
+margin-bottom:30px;
+position:relative;
+}
+
+h2::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-8px;
+width:70px;
+height:4px;
+background:var(--primary);
+border-radius:10px;
+}
+
+/* HERO */
+.hero{
+min-height:100vh;
+background:
+linear-gradient(rgba(15,23,42,.82),rgba(15,23,42,.88)),
+url("profile.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px;
+}
+
+.hero img{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid white;
+object-fit:cover;
+box-shadow:0 0 35px rgba(0,0,0,.4);
+}
+
+.hero h1{
+margin-top:25px;
+font-size:50px;
+font-weight:700;
+}
+
+.hero p{
+margin-top:12px;
+font-size:22px;
+color:#d1d5db;
+}
+
+.hero-buttons{
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:14px 28px;
+background:var(--primary);
+border-radius:12px;
+font-weight:600;
+transition:.35s;
+display:inline-block;
+}
+
+.btn:hover{
+background:var(--hover);
+transform:translateY(-3px);
+}
+
+.btn-outline{
+padding:14px 28px;
+border:2px solid white;
+border-radius:12px;
+font-weight:600;
+transition:.35s;
+}
+
+.btn-outline:hover{
+background:white;
+color:#111827;
 }
 
 /* NAV */
@@ -40,11 +145,11 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:15px 30px;
+padding:18px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(15,23,42,.85);
+background:rgba(15,23,42,.7);
 backdrop-filter:blur(10px);
 border-bottom:1px solid var(--border);
 z-index:999;
@@ -52,101 +157,125 @@ z-index:999;
 
 nav h3{
 color:white;
+font-size:20px;
 }
 
 nav ul{
 display:flex;
-gap:20px;
+gap:25px;
 list-style:none;
 }
 
-nav a{
+nav ul li a{
 color:#cbd5e1;
-text-decoration:none;
+font-weight:500;
+transition:.3s;
 }
 
-nav a:hover{
+nav ul li a:hover{
 color:white;
 }
 
-/* HERO */
-.hero{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
+/* ABOUT */
+.about{
+background:var(--bg);
 text-align:center;
-flex-direction:column;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("profile.jpg");
-background-size:cover;
-background-position:center;
-padding:40px;
 }
 
-.hero img{
-width:170px;
-height:170px;
-border-radius:50%;
-border:4px solid white;
-}
-
-.hero h1{
-font-size:45px;
-margin-top:20px;
-}
-
-.hero p{
-color:#cbd5e1;
-margin-top:10px;
-}
-
-/* BUTTON */
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 20px;
-background:var(--primary);
-border-radius:10px;
-color:white;
-text-decoration:none;
-}
-
-/* SECTIONS */
-section{
-padding:80px 20px;
-max-width:1000px;
+.about p{
+max-width:800px;
 margin:auto;
-}
-
-.card{
-background:var(--card);
-padding:20px;
-margin:15px 0;
-border-radius:12px;
-border:1px solid var(--border);
+line-height:1.8;
+color:#cbd5e1;
+font-size:17px;
 }
 
 /* SKILLS */
 .skills-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
 gap:15px;
+margin-top:40px;
 }
 
 .skill{
-background:var(--card2);
-padding:15px;
-border-radius:10px;
+background:var(--card);
+padding:14px;
+border-radius:12px;
 text-align:center;
+transition:.3s;
+border:1px solid var(--border);
+}
+
+.skill:hover{
+transform:translateY(-5px);
+background:var(--card2);
+}
+
+/* PROJECTS */
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.project{
+background:var(--card);
+border-radius:16px;
+overflow:hidden;
+border:1px solid var(--border);
+transition:.3s;
+}
+
+.project:hover{
+transform:translateY(-6px);
+}
+
+.project img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.project-content{
+padding:18px;
+}
+
+.project-content p{
+color:#cbd5e1;
+margin:10px 0;
+line-height:1.5;
+}
+
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-top:10px;
+}
+
+.tag{
+font-size:12px;
+padding:5px 10px;
+background:var(--primary);
+border-radius:20px;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
-padding:20px;
+padding:25px;
 color:#94a3b8;
 border-top:1px solid var(--border);
-margin-top:40px;
+margin-top:60px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero h1{font-size:34px;}
+.hero p{font-size:16px;}
+nav{padding:15px 20px;}
+nav ul{display:none;}
 }
 
 </style>
@@ -161,33 +290,38 @@ margin-top:40px;
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
 <li><a href="#certificates">Certificates</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
 <!-- HERO -->
-<div class="hero">
+<section class="hero">
+<div>
 <img src="profile.jpg">
 <h1>Alaa Ahmed</h1>
 <p>Data Analyst | Power BI | SQL | Excel | Python</p>
-<a class="btn" href="#contact">Contact Me</a>
-</div>
 
-<!-- ABOUT -->
-<section id="about">
-<div class="card">
-<h2>About Me</h2>
-<p>
-Data Analyst with experience in Power BI, Excel, SQL and Python.
-Skilled in turning data into insights.
-</p>
+<div class="hero-buttons">
+<a class="btn" href="#projects">View Work</a>
+<a class="btn-outline" href="#contact">Contact Me</a>
+</div>
 </div>
 </section>
 
+<!-- ABOUT -->
+<section id="about" class="about container">
+<h2>About Me</h2>
+<p>
+Data Analyst with strong experience in sales, accounting, and business reporting.
+Skilled in Power BI, Excel, SQL, and Python.
+Focused on turning data into actionable insights for business decisions.
+</p>
+</section>
+
 <!-- SKILLS -->
-<section id="skills">
-<div class="card">
+<section id="skills" class="container">
 <h2>Skills</h2>
 <div class="skills-grid">
 <div class="skill">Power BI</div>
@@ -196,28 +330,56 @@ Skilled in turning data into insights.
 <div class="skill">Python</div>
 <div class="skill">Data Analysis</div>
 <div class="skill">Reporting</div>
+<div class="skill">Business Intelligence</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="container">
+<h2>Projects</h2>
+<div class="projects">
+<div class="project">
+<img src="ouia.png">
+<div class="project-content">
+<h3>OUIA CAFE Dashboard</h3>
+<p>Sales performance analysis dashboard built with Power BI.</p>
+<a class="btn" href="https://github.com/Alaamhmed/OUIA-CAFE">View Project</a>
+</div>
+</div>
+
+<div class="project">
+<img src="bakery.png">
+<div class="project-content">
+<h3>EZ Bakery Dashboard</h3>
+<p>Business insights dashboard for operations.</p>
+<a class="btn" href="https://github.com/Alaamhmed/Ez-Bakery">View Project</a>
+</div>
 </div>
 </div>
 </section>
 
 <!-- CERTIFICATES -->
-<section id="certificates">
-<div class="card">
+<section id="certificates" class="container">
 <h2>Certificates</h2>
-<p>📊 AMIT - Data Analysis (2025)</p>
-<p>📈 CMA Diploma</p>
-<p>📘 English Course</p>
+<div class="skills-grid">
+<div class="skill">📊 Data Analysis - AMIT (2025)</div>
+<div class="skill">📈 CMA Diploma</div>
+<div class="skill">📘 English Course</div>
 </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-<div class="card">
+<section id="contact" class="container">
 <h2>Contact</h2>
-<p>Email: alaamhmed010061@hotmail.com</p>
-<p>LinkedIn: linkedin.com/in/alaa-mahmed-0bb08a204</p>
-<p>GitHub: github.com/Alaamhmed</p>
+<div class="skills-grid">
+<div class="skill">📧 Email</div>
+<div class="skill">📱 UAE Phone</div>
+<div class="skill">📞 Egypt Phone</div>
+<div class="skill">💼 LinkedIn</div>
+<div class="skill">💻 GitHub</div>
+</div>
 
+<div style="text-align:center;margin-top:40px;">
 <a class="btn" href="Alaa Mohamed.pdf" download>Download CV</a>
 </div>
 </section>
