@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- استدعاء مكتبات الأيقونات الرسمية والبرمجية -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    
     <style>
         /* --- GLOBAL STYLES --- */
         * {
@@ -95,7 +99,7 @@
         /* --- HERO SECTION --- */
         .hero {
             min-height: 90vh;
-            background: linear-gradient(rgba(15,23,42,.82), rgba(15,23,42,.88)), url("bakery.png"); /* تم تغيير الخلفية لصورة مشروعك كشكل جمالي */
+            background: linear-gradient(rgba(15,23,42,.82), rgba(15,23,42,.88)), url("bakery.png");
             background-size: cover;
             background-position: center;
             display: flex;
@@ -189,6 +193,16 @@
             transform: translateY(-5px);
             background: var(--card2);
         }
+        .skill i {
+            display: block;
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #94a3b8;
+            transition: .3s;
+        }
+        .skill:hover i {
+            color: white;
+        }
         .skill a {
             color: #cbd5e1;
             transition: .3s;
@@ -196,6 +210,15 @@
         .skill a:hover {
             color: white;
         }
+
+        /* الألوان الرسمية للأيقونات عند التمرير بالماوس */
+        .skill:hover .fa-linkedin { color: #0077b5; }
+        .skill:hover .fa-github { color: #fafafa; }
+        .skill:hover .devicon-python-plain { color: #3776ab; }
+        .skill:hover .devicon-figma-plain { color: #f24e1e; }
+        .skill:hover .fa-file-excel { color: #1f7244; }
+        .skill:hover .fa-chart-bar { color: #f2c811; } /* لون ذهبي لـ Power BI */
+        .skill:hover .fa-database { color: #00758f; }
 
         /* --- PROJECTS SECTION --- */
         .projects-grid {
@@ -318,10 +341,9 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div>
-            <!-- تأكد من وجود ملف profile.jpg في نفس الفولدر أو استبدله برابط صورتك الشخصية -->
             <img src="profile.jpg" alt="Alaa Ahmed">
             <h1>Alaa Mohmed</h1>
-            <p>Data Analyst </p>
+            <p>Data Analyst</p>
             <div class="hero-buttons">
                 <a class="btn" href="#projects">View Work</a>
                 <a class="btn-outline" href="#contact">Contact Me</a>
@@ -345,22 +367,22 @@
         <h2>Expertise & Skills</h2>
         <div class="skills-grid">
             <!-- Data & Tech Skills -->
-            <div class="skill">📊 Power BI & DAX</div>
-            <div class="skill">🟢 Microsoft Excel</div>
-            <div class="skill">🛢️ SQL (Data Querying)</div>
-            <div class="skill">🐍 Python</div>
-            <div class="skill">🎨 Figma & PowerPoint</div>
+            <div class="skill"><i class="fa-solid fa-chart-bar"></i>Power BI & DAX</div>
+            <div class="skill"><i class="fa-solid fa-file-excel"></i>Microsoft Excel</div>
+            <div class="skill"><i class="fa-solid fa-database"></i>SQL (Data Querying)</div>
+            <div class="skill"><i class="devicon-python-plain"></i>Python</div>
+            <div class="skill"><i class="devicon-figma-plain"></i>Figma & PowerPoint</div>
             
             <!-- Financial & Sales Skills -->
-            <div class="skill">💰 Sales Accounting</div>
-            <div class="skill">📈 Revenue Recognition</div>
-            <div class="skill">🏦 Cash & Bank Reconciliation</div>
-            <div class="skill">📦 Inventory & Stock Control</div>
+            <div class="skill"><i class="fa-solid fa-calculator"></i>Sales Accounting</div>
+            <div class="skill"><i class="fa-solid fa-chart-line"></i>Revenue Recognition</div>
+            <div class="skill"><i class="fa-solid fa-building-columns"></i>Cash & Bank Reconciliation</div>
+            <div class="skill"><i class="fa-solid fa-boxes-stacked"></i>Inventory & Stock Control</div>
             
             <!-- Systems & ERPs -->
-            <div class="skill">⚙️ Qoyod (ERP)</div>
-            <div class="skill">🍏 Foodics (POS)</div>
-            <div class="skill">🤝 Sales Ops & Closing</div>
+            <div class="skill"><i class="fa-solid fa-gears"></i>Qoyod (ERP)</div>
+            <div class="skill"><i class="fa-solid fa-cash-register"></i>Foodics (POS)</div>
+            <div class="skill"><i class="fa-solid fa-handshake"></i>Sales Ops & Closing</div>
         </div>
     </section>
     
@@ -382,8 +404,7 @@
                             <span class="tag">DAX</span>
                         </div>
                     </div>
-                    <!-- حط رابط الجيت هب الخاص بمشروع الـ Bakery هنا مكان الـ # -->
-                    <a class="project-btn" href="https://github.com/Alaamhmed/Ez-Bakery" target="_blank">📊 View Dashboard</a>
+                    <a class="project-btn" href="https://github.com/Alaamhmed/Ez-Bakery" target="_blank"><i class="fa-solid fa-chart-pie"></i> View Dashboard</a>
                 </div>
             </div>
 
@@ -400,8 +421,7 @@
                             <span class="tag">DAX</span>
                         </div>
                     </div>
-                    <!-- حط رابط الجيت هب الخاص بمشروع الـ Ouia هنا مكان الـ # -->
-                    <a class="project-btn" href="https://github.com/Alaamhmed/OUIA-CAFE" target="_blank">📊 View Dashboard</a>
+                    <a class="project-btn" href="https://github.com/Alaamhmed/OUIA-CAFE" target="_blank"><i class="fa-solid fa-chart-pie"></i> View Dashboard</a>
                 </div>
             </div>
 
@@ -415,14 +435,16 @@
             
             <!-- Certificate 1: AMIT -->
             <div class="skill">
-                📊 Data Analysis<br>
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Data Analysis</span><br>
                 <small>AMIT</small><br>
                 <small style="color: #94a3b8; font-size: 12px;">Sep 2026</small>
             </div>
             
             <!-- Certificate 2: CMA -->
             <div class="skill">
-                📈 CMA Diploma<br>
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <span>CMA Diploma</span><br>
                 <small>AURA Academy</small><br>
                 <small style="color: #657892; font-weight: 600; font-size: 13px;">(First Part)</small><br>
                 <small style="color: #94a3b8; font-size: 12px;">Nov 2022</small>
@@ -430,7 +452,8 @@
             
             <!-- Certificate 3: MTCC Mansoura University -->
             <div class="skill">
-                📘 English Course<br>
+                <i class="fa-solid fa-language"></i>
+                <span>English Course</span><br>
                 <small>EFL - American Learning Style</small><br>
                 <small>MTCC | Mansoura University</small><br>
                 <small style="color: #657892; font-weight: 500; font-size: 12px;">{60 Hours}</small><br>
@@ -439,35 +462,41 @@
 
         </div>
     </section>
+
     <!-- CONTACT -->
     <section class="container" id="contact">
         <h2>Contact</h2>
         <div class="skills-grid">
             <div class="skill">
-                📧 Email<br>
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span><br>
                 <small><a href="mailto:alaamhmed010061@hotmail.com">alaamhmed010061@hotmail.com</a></small>
             </div>
             <div class="skill">
-                📱 UAE Phone<br>
+                <i class="fa-solid fa-phone"></i>
+                <span>UAE Phone</span><br>
                 <small><a href="tel:+971501882997">+971 501 882 997</a></small>
             </div>
             <div class="skill">
-                📞 Egypt<br>
+                <i class="fa-solid fa-mobile-screen"></i>
+                <span>Egypt Phone</span><br>
                 <small><a href="tel:+201006120408">+20 100 612 0408</a></small>
             </div>
             <div class="skill">
-                💼 LinkedIn<br>
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span><br>
                 <small><a href="https://linkedin.com/in/alaa-mahmed-0bb08a204" target="_blank">View Profile</a></small>
             </div>
             <div class="skill">
-                💻 GitHub<br>
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span><br>
                 <small><a href="https://github.com/Alaamhmed" target="_blank">View GitHub</a></small>
             </div>
         </div>
 
         <!-- CV BUTTON -->
         <div style="text-align:center; margin-top:40px;">
-            <a class="btn" href="Alaa Mohamed.pdf" download>📄 Download CV</a>
+            <a class="btn" href="Alaa Mohamed.pdf" download><i class="fa-solid fa-file-pdf"></i> Download CV</a>
         </div>
     </section>
 
